@@ -54,12 +54,17 @@
 	\end{frame}
 	
 	%% 3
-	\begin{frame}{Постановка задачи}
-		Определить:
+	\begin{frame}{Постановка задач}
+		Задачи:
 	    \begin{itemize}
-	  	\item Зависимость поправки к массе ЗС от параметров населения двойных
-	  	\item Значение поправки к массе для различных ЗС
+	  	\item Разработать методику определения поправок к массе ЗС от параметров населения двойных
+	  	\item Отработать разработанную методику для нескольких РЗС
 		\end{itemize}
+%		Определить:
+%	    \begin{itemize}
+%	  	\item Зависимость поправки к массе ЗС от параметров населения двойных
+%	  	\item Значение поправки к массе для различных ЗС
+%		\end{itemize}
 	\end{frame}
 	
 	%% 4
@@ -155,7 +160,8 @@
 			
 			\begin{column}{0.8\textwidth}
 				\hspace{-0.5cm}
-    			\includegraphics[width=5cm]{images/LF}
+				\vspace{-1.9cm}				
+    			\includegraphics[width=5.5cm]{images/LF}
 			\end{column}
 		\end{columns}
 		
@@ -183,13 +189,33 @@
 	
 	%% 9
 	\begin{frame}{Описание метода}
+		\begin{columns}
+			\begin{column}{0.5\textwidth}
+				\begin{itemize}
+				\item Задаем долю двойных $\alpha$
+				\item Считаем $N_{binaries}$ для каждого интервала $\Delta J$
+				\item Для каждой звезды определяем светимость $L$ 
+				\item Для каждой двойной определяем $q$ (метод Неймана)
+				\end{itemize}
+			\end{column}
+			
+			\begin{column}{0.4\textwidth}
+				\vspace{0.5cm}	
+    			\includegraphics[width=5cm]{images/LF}
+			\end{column}
+		\end{columns}
+
+		\centering
+		\pause
+		\begin{tikzpicture}
+			\node[rectangle2, align=center](maintopic){$L, q$};
+		\end{tikzpicture}
+
+	\end{frame}
+	
+	%% 10
+	\begin{frame}{Описание метода}
 		\begin{itemize}
-			\item Задаем долю двойных $\alpha$
-			\item Считаем $N_{binaries}$ для каждого интервала $\Delta J$
-			\item Для всех звезд определяем светимость $L$ 
-			\item Для каждой двойной определяем $q$ (метод Неймана)
-		
-			\pause
 			\item Определяем $\mathfrak{M_1}$ и $\mathfrak{M_2}$ из СУ:
 		\end{itemize}
 		
@@ -205,11 +231,12 @@
 		\]
 		\begin{itemize}
 			\item Находим массу всех двойных звезд ЗС
+			\item $M_{cluster} = M_{binaries} + M_{singles}$
 		\end{itemize}
 	\end{frame}
 
 	
-	%% 10
+	%% 11
 	\begin{frame}{Результаты}
 		\begin{columns}
 			\begin{column}{0.45\textwidth}
@@ -222,21 +249,42 @@
 		\end{columns}
 	\end{frame}
 	
-	%% 11
+	%% 12
 	\begin{frame}{Результаты}
 	\centering
 		\includegraphics[width=10cm]{images/alphas_flat}
 	\end{frame}
 	
-	%% 12
+	%% 13
 	\begin{frame}{Выводы}
 		\begin{itemize}
-			\item Полученные зависимости -- {\bf линейные}
-			\item Чем ближе максимум распределения по $q$ к 1, тем больше поправочный коэффициент.
-			\item Для всех скоплений (кроме самого старого) значение поправочного коэффициента {\bf одинаково}.
-			\item Для <<реалистичных>> распределений поправка к массе\\ отличается не более, чем на {\bf 2.5\%}.
-		\end{itemize}
+			\item Разработана методика определения поправочного коэффициента от параметров населения двойных
 		
+			\item Найдены поправочные коэффициенты
+			\begin{itemize}
+				\item при разной $\alpha$
+				\item при различных распределениях по $q$
+				\item для пяти РЗС
+			\end{itemize}
+			
+			\item Зависимость от $\alpha$ --  {\bf линейная}
+			\begin{itemize}
+				\item наклон определяется видом распределения по $q$
+			\end{itemize}
+		
+			\item Зависимость от распределения $q$:
+			\begin{itemize}
+				\item поправочный коэффициент растет, если учитывать системы большой кратности
+				\item чем больше звезд с $q \approx 1$, тем больше поправка к массе
+				\item дисперсия поправки к массе для <<реалистичных>> распределений: 2.5 \%
+			\end{itemize}
+			
+			\item Для разных РЗС:
+			\begin{itemize}
+				\item для всех скоплений (кроме самого старого) значение поправочного коэффициента {\bf одинаково}.
+			\end{itemize}
+		\end{itemize}
+%		
 	\vspace{2cm}
 
 	{\footnotesize Borodina et.al  <<Unresolved Binaries and Galactic Clusters’ Mass Estimates>> (2019)}
